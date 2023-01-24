@@ -1,15 +1,17 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import PropTypes from "prop-types";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
 import { Container } from "react-bootstrap";
 
-export const Home = () => {
+export const Track = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div>
-			Probando Home...
+			probando Track...
 		</div>
 	);
 };
+

@@ -4,12 +4,12 @@ import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Container } from "react-bootstrap";
 
-export const Home = () => {
+export const Login = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<div>
-			Probando Home...
+			Probando Login...
 		</div>
 	);
 };
