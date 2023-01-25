@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			token: null,
 			message: null,
 			demo: [
 				{
@@ -19,6 +20,54 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+
+			linkTokenfromsessionStore: () => {
+
+				const token = sessionStorage.getItem("token");
+				if (token && token !="" && token!= undefined) setStore({ token: token });
+
+			},
+
+			logout: () => {
+
+				sessionStorage.removeItem("token");
+				setStore({ token: null });
+
+			},
+
+			login: async (email, password) => {
+
+				const options = {
+					method: 'POST',
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						"email": email,
+						"password": password
+					})
+				};
+
+				try {
+
+					const response = await fetch('https://3001-faldea1-p31finalproyect-oudkkrtp38y.ws-us84.gitpod.io/api/token', options)
+					if(response.status !== 200){
+	
+						alert("There has been an error");
+						return false;
+					} 
+	
+					const data = await response.json();
+					sessionStorage.setItem("token", data.access_token);
+					setStore({ token: data.access_token })
+					return true;
+
+				}
+				catch(error){
+					console.error("Trying log in, there has been an error")
+
+				}
 			},
 
 			getMessage: async () => {
