@@ -22,7 +22,7 @@ export const Login = () => {
 
 	return (
 		<Container>
-			<h1>Login</h1>
+			<h1>Welcome!</h1>
 				{(store.token && store.token != "" && store.token != undefined)  ? "You are logged in with a token" + store.token : 
 				<div>			
 					<input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} /> 

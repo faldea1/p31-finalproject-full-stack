@@ -1,3 +1,29 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+ul{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+
+#inputnotes{
+    width: 100%;
+    list-style: none;
+}
+
+
+#titlenotes{
+    text-align: center;
+}
+
+
+ul li {
+    width: 100%;
+    list-style: none;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 6px;
+}
+
+
+
+
+
