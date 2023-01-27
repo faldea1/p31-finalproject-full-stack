@@ -54,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					const response = await fetch('https://3001-faldea1-p31finalproyect-oudkkrtp38y.ws-us84.gitpod.io/api/token', options)
 					if(response.status !== 200){
 	
-						alert("There has been an error");
+						alert("email &/|| password incorrect");
 						return false;
 					} 
 	
@@ -73,7 +73,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getMessage: async () => {
 				try{
 					// fetching data from the backend
-					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
+					const store = getStore();
+
+					const options = {
+						headers: {
+							"Authorization": "Bearer " + store.token
+						}
+					}
+					const resp = await fetch('https://3001-faldea1-p31finalproyect-oudkkrtp38y.ws-us84.gitpod.io/api/hello', options)
 					const data = await resp.json()
 					setStore({ message: data.message })
 					// don't forget to return something, that is how the async resolves

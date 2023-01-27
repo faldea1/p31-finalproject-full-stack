@@ -9,8 +9,8 @@ export const Orchards = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div>
-			Probando orchards...
+		<div style={{textAlign: 'center', color: 'black', fontWeight: 'bold', marginTop: 10}}>
+			Probando Orchards...
 		</div>
 	);
 };

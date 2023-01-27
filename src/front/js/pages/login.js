@@ -21,13 +21,19 @@ export const Login = () => {
 	if(store.token && store.token != "" & store.token != undefined) navigate("/");
 
 	return (
-		<Container>
-			<h1>Welcome!</h1>
+		<Container style={{ textAlign: 'center' }}>
+			<h1 style={{marginTop: 60}}><span style={{color: 'limegreen'}}>Wel</span><span style={{color: 'yellowgreen'}}>com</span><span style={{color: 'forestgreen'}}>e</span><span style={{color: 'darkgreen'}}>!</span></h1>
 				{(store.token && store.token != "" && store.token != undefined)  ? "You are logged in with a token" + store.token : 
-				<div>			
-					<input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} /> 
-					<input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value) } /> 
-					<Button onClick={userLogin}>Log In</Button>
+				<div>
+					<div>		
+						<input type="text" placeholder="email" style={{margin: 8}} value={email} onChange={(e) => setEmail(e.target.value)} />
+					</div>
+					<div>	 
+						<input type="password" placeholder="password" style={{margin: 8}} value={password} onChange={(e) => setPassword(e.target.value) } />
+					</div>
+					<div>
+						<Button variant="info" style={{margin: 15, color: 'white'}} onClick={userLogin}>Enter</Button>
+					</div> 
 				</div>
 				}
 			

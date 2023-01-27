@@ -9,7 +9,7 @@ export const Vegetables = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div>
+		<div style={{textAlign: 'center', color: 'green', fontWeight: 'bold', marginTop: 10}}>
 			Probando Vegs...
 		</div>
 	);

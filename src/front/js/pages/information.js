@@ -10,10 +10,11 @@ export const Information = () => {
 
 	return (
 		<div className="information">
-			<Container>
-				<Button variant="success"><Link className="nav-link" style={{color: 'white'}} to="/information/vegetables">Vegetables</Link></Button>
-				<Button variant="warning"><Link className="nav-link" style={{color: 'white'}} to="/information/herbs">Herbs</Link></Button>
-				<Button variant="secondary"><Link className="nav-link" style={{color: 'white'}} to="/information/orchards">Orchards</Link></Button>
+			<Container style={{textAlign: 'center', marginTop: 60}}>
+				<Button variant="success" style={{marginRight: 10}}><Link className="nav-link" style={{color: 'white'}} to="/information/vegetables">Vegetables</Link></Button>
+				<Button variant="warning" style={{marginRight: 10}}><Link className="nav-link" style={{color: 'white'}} to="/information/herbs">Herbs</Link></Button>
+				<Button variant="secondary" style={{marginRight: 10}}><Link className="nav-link" style={{color: 'white'}} to="/information/flowers">Flowers</Link></Button>
+				<Button variant="dark"><Link className="nav-link" style={{color: 'white'}} to="/information/orchards">Orchards</Link></Button>
 				</Container>
 			<Outlet />
 		</div>

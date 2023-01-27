@@ -19,6 +19,7 @@ import { Login } from "./pages/login";
 import { Vegetables } from "./pages/veginfo";
 import { Herbs } from "./pages/herbsinfo";
 import { Orchards } from "./pages/orchardsinfo";
+import { Flowers } from "./pages/flowersinfo";
 
 //create your first component
 const Layout = () => {
@@ -47,6 +48,7 @@ const Layout = () => {
                   <Route exact path="/information" element={<Information />}>
                     <Route exact path="vegetables" element={ <Vegetables /> } />
                     <Route exact path="herbs" element={ <Herbs /> } />
+                    <Route exact path="flowers" element={ <Flowers /> } />
                     <Route exact path="orchards" element={ <Orchards /> } />
                   </Route>
                   <Route exact path="/notes" element={<Notes />} />

@@ -15,20 +15,24 @@ export const ProjectNavbar = () => {
 				</Link>				
 			</NavbarBrand>
 			<h5>App Name</h5>		
-				<Nav>
-					<Link className="nav-link" to="/profile">Profile</Link>
-					<Link className="nav-link" to="/track">Track</Link>
-					<Link className="nav-link" to="/new">New</Link>
-					<Link className="nav-link" to="/information">Info.</Link>
-					<Link className="nav-link" to="/notes">Notes</Link>
-				</Nav>
 					<Container className="justify-content-end">
-						{!store.token ? 
-						<Button variant="info"><Link className="nav-link" style={{color: 'white'}} to="/login">Log In</Link></Button>
+						{!store.token ?
+						<>
+							<Button variant="info"><Link className="nav-link" style={{color: 'white'}} to="/login">Log In</Link></Button>
+							<Button variant="primary"><Link className="nav-link" style={{color: 'white'}} to="/register">Register, Free</Link></Button>
+						</>
 						:
-						<Button onClick={() => actions.logout() } variant="danger" style={{color: 'white'}}>Log Out</Button>
-						}
-						<Button variant="primary"><Link className="nav-link" style={{color: 'white'}} to="/register">Register, Free</Link></Button>
+						<>
+							<Nav style={{marginRight: 50}}>
+								<Link className="nav-link" to="/profile">Profile</Link>
+								<Link className="nav-link" to="/track">Track</Link>
+								<Link className="nav-link" to="/new">New</Link>
+								<Link className="nav-link" to="/information">Info.</Link>
+								<Link className="nav-link" to="/notes">Notes</Link>
+							</Nav>
+							<Button onClick={() => actions.logout() } variant="danger"><Link className="nav-link" style={{color: 'white'}} to="/">Log Out</Link></Button>
+						</>
+						}						
 					</Container>
 		</Navbar>
 	);

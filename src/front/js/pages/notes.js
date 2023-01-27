@@ -93,10 +93,10 @@ export const Notes = () => {
   };
 
   return (
-    <Container>
+    <Container style={{marginTop: 60}}>
       <Row>
         <Col>
-          <h1 id="titlenotes">
+          <h1 id="titlenotes" style={{marginBottom: 15}}>
             Notes{" "}
             <span style={{ color: "limegreen" }} className="mytitleicon">
               <FaSeedling />
