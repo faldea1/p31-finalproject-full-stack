@@ -18,7 +18,8 @@ export const ProjectNavbar = () => {
 					<Container className="justify-content-end">
 						{!store.token ?
 						<>
-							<Button variant="info"><Link className="nav-link" style={{color: 'white'}} to="/login">Log In</Link></Button>
+							<Button variant="success"><Link className="nav-link" style={{color: 'white'}} to="/login">Log In</Link></Button>
+							<div style={{color: 'white'}}>aa</div>
 							<Button variant="primary"><Link className="nav-link" style={{color: 'white'}} to="/register">Register, Free</Link></Button>
 						</>
 						:
