@@ -22,7 +22,7 @@ export const Login = () => {
 
 	return (
 		<Container style={{ textAlign: 'center' }}>
-			<h1 style={{marginTop: 60}}><span style={{color: 'limegreen'}}>Wel</span><span style={{color: 'yellowgreen'}}>com</span><span style={{color: 'forestgreen'}}>e</span><span style={{color: 'darkgreen'}}>!</span></h1>
+			<h1 style={{marginTop: 60, fontWeight: 'bolder'}}><span style={{color: 'limegreen'}}>Wel</span><span style={{color: 'yellowgreen'}}>com</span><span style={{color: 'forestgreen'}}>e</span><span style={{color: 'darkgreen'}}>!</span></h1>
 				{(store.token && store.token != "" && store.token != undefined)  ? "You are logged in with a token" + store.token : 
 				<form>
 					<div>		

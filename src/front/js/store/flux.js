@@ -546,9 +546,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				origin: '',
 				family: ''
 				},
-				{common_name: 'Sage',
+				{common_name: 'Arugula',
 				scientific_name: '',
-				herburl: 'https://th.bing.com/th/id/R.0c15777475f2897ee615c8065c92d895?rik=iG72D34qVUYkNg&riu=http%3a%2f%2fappreciategoods.com%2fwp-content%2fuploads%2f2017%2f01%2fSage-Herb-Article-Featured-Image.jpg&ehk=EJGg3qcW6IKIF7x%2b%2f%2fBwhDWLg5Bl%2fmh54S%2fJSRkro74%3d&risl=&pid=ImgRaw&r=0',
+				herburl: 'https://culinaryherbguide.com/images/herbpics/arugula.jpg',
 				description: '',
 				care_level: '',
 				indoor: '',

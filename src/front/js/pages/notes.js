@@ -96,8 +96,8 @@ export const Notes = () => {
     <Container style={{marginTop: 60}}>
       <Row>
         <Col>
-          <h1 id="titlenotes" style={{marginBottom: 15}}>
-            Notes{" "}
+          <h1 id="titlenotes" style={{marginBottom: 15, fontWeight: 'bolder'}}>
+            <span style={{color: 'limegreen'}}>No</span><span style={{color: 'yellowgreen'}}>te</span><span style={{color: 'forestgreen'}}>s</span>{" "}
             <span style={{ color: "limegreen" }} className="mytitleicon">
               <FaSeedling />
             </span>

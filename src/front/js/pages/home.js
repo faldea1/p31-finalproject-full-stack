@@ -11,7 +11,7 @@ export const Home = () => {
     <Container>
       <Row>
         <Col>
-          <h1 style={{ textAlign: "center", marginTop: 60, marginBottom: 15 }}>
+          <h1 style={{ textAlign: "center", marginTop: 60, marginBottom: 15, fontWeight: 'bolder'}}>
             <span style={{ color: "limegreen" }}>Join</span>
             <span style={{ color: "yellowgreen" }}> the</span>
             <span style={{ color: "forestgreen" }}> Community</span>

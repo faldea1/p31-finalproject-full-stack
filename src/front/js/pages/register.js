@@ -19,7 +19,7 @@ export const Register = () => {
 
 	return (
 	<Container style={{ textAlign: 'center' }}>
-		<h1 style={{marginTop: 60}}><span style={{color: 'limegreen'}}>Re</span><span style={{color: 'yellowgreen'}}>gis</span><span style={{color: 'forestgreen'}}>ter</span></h1>
+		<h1 style={{marginTop: 60, fontWeight: 'bolder'}}><span style={{color: 'limegreen'}}>Re</span><span style={{color: 'yellowgreen'}}>gis</span><span style={{color: 'forestgreen'}}>ter</span></h1>
 		<div style={{fontSize: 'small', marginTop: 20, marginBottom: 20}}>Please fill in this form to create an account</div>
 		<form onSubmit={handleSubmit}>
 			<div>
