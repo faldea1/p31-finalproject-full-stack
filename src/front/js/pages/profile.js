@@ -67,7 +67,7 @@ export const Profile = () => {
       </Row>
 	  <Row style={{marginTop:150}}>
 		<Col>
-		<Dropdown style={{marginLeft: 5}}>
+		<Dropdown style={{marginLeft: 5, marginBottom: 100}}>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               History
             </Dropdown.Toggle>

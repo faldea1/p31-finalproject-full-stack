@@ -9,9 +9,11 @@ export const Track = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
+		<Container>
 		<div>
 			probando Track...
 		</div>
+		</Container>
 	);
 };
 

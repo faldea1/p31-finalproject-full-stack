@@ -15,6 +15,7 @@ export const New = () => {
   }
 
   return (
+    <Container >
     <div>
       <h1 style={{marginTop: 60, textAlign: 'center', fontWeight: 'bolder'}}><span style={{color: 'limegreen'}}>Choose </span><span style={{color: 'yellowgreen'}}>your </span><span style={{color: 'forestgreen'}}>orchard  </span><FaListUl style={{color: 'darkgreen'}} /></h1>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -22,7 +23,7 @@ export const New = () => {
           <div class="form-group col-6">
             <label style={{fontWeight: 'bold'}}>Location:</label>
             <div>
-              <input
+              <input style={{backgroundColor: 'whitesmoke'}}
                 className="form-control"
                 type="text"
                 {...register('Country', {
@@ -39,7 +40,7 @@ export const New = () => {
           <div class="form-group col-6 px-4">
             <label></label>
             <div>
-              <input
+              <input style={{backgroundColor: 'whitesmoke'}}
                 className="form-control"
                 type="text"
                 {...register('City', {
@@ -59,7 +60,7 @@ export const New = () => {
             <label style={{fontWeight: 'bold'}}>Level:</label>
             <select {...register('Level', {
               required: true
-            })} className="form-control">
+            })} className="form-control" style={{backgroundColor: 'whitesmoke'}}>
               <option value="">Pick a level...</option>
               <option value="Tutorial">Tutorial</option>
               <option value="Easy">Easy</option>
@@ -73,7 +74,7 @@ export const New = () => {
             <label style={{fontWeight: 'bold'}}>Type:</label>
             <select {...register('TypeofOrchard', {
               required: true
-            })} className="form-control">
+            })} className="form-control" style={{backgroundColor: 'whitesmoke'}}>
               <option value="">Pick an orchard...</option>
               <option value="Vertical">Vertical</option>
               <option value="Hanging">Hanging</option>
@@ -89,7 +90,7 @@ export const New = () => {
         <div>
           <label style={{fontWeight: 'bold'}}>Starting Date:</label>
           <div>
-            <input type="date" {...register('StartingDate', {
+            <input type="date" style={{backgroundColor: 'whitesmoke'}} {...register('StartingDate', {
               required: true
             })}></input>
             {errors.StartingDate?.type === 'required' && <p style={{color: 'red', fontSize: 'small'}}>Starting Date field is required...</p>}
@@ -97,14 +98,14 @@ export const New = () => {
         </div>
 
         <h6 style={{marginTop: 18, fontWeight: 'bold'}}>Vegetables:</h6>
-        <div className="form-control" style={{width:1090}}>
+        <div className="form-control" style={{width:1090, backgroundColor: 'whitesmoke'}}>
         <div>
           
         <label for="mynumber">Number of Crops:</label>
           <div>
-          <input  {...register('NumbofVegsCrops', {
+          <input {...register('NumbofVegsCrops', {
             required: true
-          })} type="number" min={0} max={15} style={{width:125, textAlign: 'center'}}/>
+          })} type="number" min={0} max={15} style={{width:125, backgroundColor: 'whitesmoke', textAlign: 'center'}}/>
           {errors.NumbofVegsCrops?.type === 'required' && <p style={{color: 'red', fontSize: 'small'}}>Number of Vegs Crops field is required...</p>}
           </div>
 
@@ -147,14 +148,14 @@ export const New = () => {
 
 
         <h6 style={{marginTop: 15, fontWeight: 'bold'}}>Herbs:</h6>
-        <div className="form-control" style={{width:1090}}>
+        <div className="form-control" style={{width:1090, backgroundColor: 'whitesmoke' }}>
         <div>
           
           <label for="mynumber">Number of Crops:</label>
           <div>
           <input  {...register('NumbofHerbsCrops', {
             required: true
-          })} type="number" min={0} max={15} style={{width:125, textAlign: 'center'}}/>
+          })} type="number" min={0} max={15} style={{width:125, backgroundColor: 'whitesmoke', textAlign: 'center'}}/>
           {errors.NumbofHerbsCrops?.type === 'required' && <p style={{color: 'red', fontSize: 'small'}}>Number of Herbs Crops field is required...</p>}
           </div>
 
@@ -194,14 +195,14 @@ export const New = () => {
 
 
         <h6 style={{marginTop: 15, fontWeight: 'bold'}}>Flowers:</h6>
-        <div className="form-control" style={{width:1090}}>
+        <div className="form-control" style={{width:1090, backgroundColor: 'whitesmoke'}}>
         <div>
           
-          <label for="mynumber">Number of Crops:</label>
+          <label style={{backgroundColor: 'whitesmoke'}} for="mynumber">Number of Crops:</label>
           <div>
           <input {...register('NumbofFlowersCrops', {
             required: true
-          })} type="number" min={0} max={15} style={{width:125, textAlign: 'center'}}/>
+          })} type="number" min={0} max={15} style={{width:125, backgroundColor: 'whitesmoke', textAlign: 'center'}}/>
           {errors.NumbofFlowersCrops?.type === 'required' && <p style={{color: 'red', fontSize: 'small'}}>Number of Flowers Crops field is required...</p>}
           </div>
 
@@ -245,5 +246,6 @@ export const New = () => {
         <p style={{color: 'white'}}>Country: {watch('Country')}</p>
       </form>
     </div>
+    </Container>
   );
 };

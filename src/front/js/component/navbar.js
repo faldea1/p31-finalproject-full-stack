@@ -8,6 +8,7 @@ export const ProjectNavbar = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
+		<Container>
 		<Navbar>
 			<NavbarBrand>
 				<Link to="/">
@@ -31,10 +32,11 @@ export const ProjectNavbar = () => {
 								<Link className="nav-link" to="/information/vegetables">Info.</Link>
 								<Link className="nav-link" to="/notes">Notes</Link>
 							</Nav>
-							<Button onClick={() => actions.logout() } variant="danger"><Link className="nav-link" style={{color: 'white'}} to="/">Log Out</Link></Button>
+							<Button onClick={() => actions.logout() } variant="danger"><Link className="nav-link" style={{color: 'white' }} to="/">Log Out</Link></Button>
 						</>
 						}						
 					</Container>
 		</Navbar>
+		</Container>
 	);
 };

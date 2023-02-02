@@ -9,13 +9,14 @@ export const Flowers = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
+		<Container>
 		<div style={{textAlign: 'center', color: 'green', fontWeight: 'bold', marginTop: 10}}>
 		{
 			store.flowersInfo.map(
 				(item, index) => {
 					return (
 						<ul style={{ display: 'inline-block', marginTop: 60 }}>
-							<Card key={index} style={{ width: '18rem', color: 'white', background: 'white', border: 'solid white', alignItems: 'center' }}>
+							<Card key={index} style={{ width: '18rem', color: 'whitesmoke', background: 'whitesmoke', border: 'none', alignItems: 'center' }}>
 								<Card.Img style={{width: 160, height: 160, borderRadius: 200 }} variant="top" src={item.flowerurl} />
 								<Card.Body>
 									<Card.Title style={{ color: 'black', fontSize: 'medium', alignText: 'center'  }}>{item.common_name}</Card.Title>
@@ -30,5 +31,6 @@ export const Flowers = () => {
 			)
 		}
 	</div>
+	</Container>
 	);
 };

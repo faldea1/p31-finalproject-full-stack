@@ -21,7 +21,7 @@ export const Login = () => {
 	if(store.token && store.token != "" & store.token != undefined) navigate("/");
 
 	return (
-		<Container style={{ textAlign: 'center' }}>
+		<Container style={{ textAlign: 'center', marginBottom: 229 }}>
 			<h1 style={{marginTop: 60, fontWeight: 'bolder'}}><span style={{color: 'limegreen'}}>Wel</span><span style={{color: 'yellowgreen'}}>com</span><span style={{color: 'forestgreen'}}>e</span><span style={{color: 'darkgreen'}}>!</span></h1>
 				{(store.token && store.token != "" && store.token != undefined)  ? "You are logged in with a token" + store.token : 
 				<form>
