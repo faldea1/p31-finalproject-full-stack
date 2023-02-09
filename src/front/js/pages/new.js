@@ -243,7 +243,7 @@ export const New = () => {
         <div style={{ textAlign: 'center', marginTop: 25}}>
         <input style={{backgroundColor: 'brown', color: 'white', fontWeight: 'bold'}} type="submit" value="Create New Orchard" />
         </div>
-        <p style={{color: 'white'}}>Country: {watch('Country')}</p>
+
       </form>
     </div>
     </Container>

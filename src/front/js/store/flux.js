@@ -1154,7 +1154,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				try {
 
-					const response = await fetch('https://3001-faldea1-p31finalproject-jn8jefi4o4z.ws-us85.gitpod.io/api/token', options)
+					const response = await fetch('https://3001-faldea1-p31finalproject-jn8jefi4o4z.ws-us86.gitpod.io/api/token', options)
 					if(response.status !== 200){
 	
 						alert("email &/|| password incorrect");
@@ -1183,7 +1183,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							"Authorization": "Bearer " + store.token
 						}
 					}
-					const resp = await fetch('https://3001-faldea1-p31finalproject-jn8jefi4o4z.ws-us85.gitpod.io/api/hello', options)
+					const resp = await fetch('https://3001-faldea1-p31finalproject-jn8jefi4o4z.ws-us86.gitpod.io/api/hello', options)
 					const data = await resp.json()
 					setStore({ message: data.message })
 					// don't forget to return something, that is how the async resolves
